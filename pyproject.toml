@@ -1,0 +1,27 @@
+[project]
+name = "pokemon-mcp"
+version = "0.1.0"
+description = "A Pokemon MCP server implementation."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.27.0,<2.0.0",
+    "openai>=2.32.0",
+    "pydantic>=2.13.3",
+    "pydantic-settings>=2.14.0",
+    "tenacity>=9.1.4",
+]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "semver2"
+version_provider = "uv"
+update_changelog_on_bump = true
+major_version_zero = true
+
+[dependency-groups]
+test = [
+    "pytest>=9.0.3",
+]
